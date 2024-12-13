@@ -1,0 +1,153 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('/assets/0-dogs-hero.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(53, 53, 51, 0.95); /* Slightly increased opacity for better visibility */
+    padding: 1rem 1rem; /* Adjusted padding for a more balanced layout */
+    position: fixed;
+    height: 10%;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Increased z-index to ensure it stays above all content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Softer, more elevated shadow for a modern look */
+    backdrop-filter: blur(5px); /* Adds a subtle blur effect to the background */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for dynamic effects */
+}
+nav h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    font-size: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s, transform 0.2s;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+/* Header Section */
+header {
+    text-align: center;
+    margin-top: 10rem;
+    padding: 2rem 1rem;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+    margin-bottom: 1.5rem;
+    color: #ffcc00
+}
+
+header p {
+    font-size: 1.6rem;
+    margin: 0 auto;
+    max-width: 800px;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Content Section */
+.content {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ffcc00;
+}
+
+.content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: #f0f0f0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        gap: 1rem;
+    }
+
+    nav h1 {
+        font-size: 1.5rem;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1.3rem;
+    }
+
+    .content {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.8rem;
+        margin-top: 1rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
+    }
+
+    .content {
+        padding: 1rem;
+    }
+}
